@@ -29,7 +29,7 @@ int main()
 	DESCENDSort( arr, sort_arr, SIZE );
 
 	printf(" Sorting (DESC) >> ");
-	PrintArr(arr, SIZE);
+	PrintArr( sort_arr /* arr */, SIZE);
 
 	return 0;
 }
@@ -62,7 +62,7 @@ void SetSum(int *arr, int size, int *odd, int *even)
 			*even += *(arr+i);
 
 }
-void DESCENDSort(int *arr, int *sort_arr, int size)
+void DESCENDSort(int *org_arr, int *sort_arr, int size)
 {
 	/* by DESCENDING ( n, n-1, ... 3, 2, 1 ) */
 	int i, j;
@@ -75,11 +75,11 @@ void DESCENDSort(int *arr, int *sort_arr, int size)
 
 		for( j=i+1; j<size; j++)
 		{
-			if( *(arr+max) < *(arr+j) )
+			if( *(org_arr+max) < *(org_arr+j) )
 				max = j;
 		}
-		Swap( (arr+i), (arr+max) );	// Swap
-		*(sort_arr+i) = *(arr+max);	// Copy
+		Swap( (org_arr+i), (org_arr+max) );	// Swap
+		*(sort_arr+i) = *(org_arr+max);	// Copy
 	}
 
 }
