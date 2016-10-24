@@ -40,7 +40,7 @@ int LCM(int n1, int n2, int gcd)
 	|	= abGG
 	|
 	| Least Common Denominator(LCD) 
-	|	= NCD / GCD
+	|	= CD / GCD
 	|	= A*B / GCD
 	|	= abGG / G
 	|	= abG
