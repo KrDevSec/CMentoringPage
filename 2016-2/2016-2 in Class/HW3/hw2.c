@@ -28,13 +28,13 @@ void encoding(char *text)
 	int i;
 
 	for(i=0; text[i]!=NULL; i++)
-		text[i]+=3;
+		text[i]+=MAGIC_KEY;
 }
 void decoding(char *text)
 {
 	int i;
 
 	for(i=0; text[i]!=NULL; i++)
-		text[i]-=3;
+		text[i]-=MAGIC_KEY;
 
 }
